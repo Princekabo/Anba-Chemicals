@@ -1,0 +1,51 @@
+:root{--ink:#12263A;--paper:#F3F6F8;--surface:#fff;--teal:#0F6B6B;--amber:#F2A900;--slate:#51606E;--line:#D3DCE3}
+@media (prefers-color-scheme:dark){:root{--ink:#E8EEF3;--paper:#0E1A26;--surface:#15273A;--teal:#4FC3C3;--slate:#9FB0BF;--line:#2A3F54}}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Public Sans",system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+main{flex:1}
+h1,h2,h3{font-family:Archivo,"Arial Narrow",Arial,sans-serif;font-stretch:85%;line-height:1.05;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font:800 22px Archivo,Arial,sans-serif;font-stretch:80%;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:22px;height:22px;background:var(--amber);clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+nav a{margin-left:22px;text-decoration:none;font-weight:500;font-size:15px;padding-bottom:4px}
+nav a:hover{color:var(--teal)}
+nav a[aria-current="page"]{border-bottom:3px solid var(--amber)}
+.demo{background:var(--amber);color:#12263A;text-align:center;font-size:14px;font-weight:600;padding:6px 12px}
+.hero{padding:96px 0 72px}
+.hero h1{font-size:clamp(44px,8vw,88px);font-weight:800;max-width:11ch}
+.hero p{max-width:50ch;color:var(--slate);font-size:19px;margin:22px 0 32px}
+.btn{display:inline-block;font:700 17px Archivo,Arial,sans-serif;background:var(--amber);color:#12263A;border:0;padding:15px 28px;border-radius:4px;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:10px}
+.links{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.links a{padding:28px 24px 28px 0;text-decoration:none;border-right:1px solid var(--line);margin-right:24px}
+.links a:last-child{border:0}
+.links h3{font-size:26px;font-weight:700;margin-bottom:6px}
+.links span{color:var(--slate);font-size:16px}
+.links a:hover h3{color:var(--teal)}
+.page{padding:56px 0 72px}
+.page h1{font-size:clamp(36px,6vw,60px);font-weight:800;margin-bottom:10px}
+.lead{color:var(--slate);max-width:52ch;margin:0 0 32px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chips button{font:500 15px "Public Sans",sans-serif;padding:9px 16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.table{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:480px}
+th{text-align:left;font-weight:600;font-size:14px;color:var(--slate);padding:8px 10px;border-bottom:2px solid var(--ink)}
+td{padding:14px 10px;border-bottom:1px solid var(--line)}
+.rows>div{display:grid;grid-template-columns:1fr 2fr;gap:8px 40px;padding:24px 0;border-top:1px solid var(--line)}
+.rows h3{font-size:26px;font-weight:700}
+.rows p{margin:0;color:var(--slate);max-width:56ch}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:15px}
+label.full{grid-column:1/-1}
+input,select,textarea{font:400 16px "Public Sans",sans-serif;padding:12px;border:1px solid var(--slate);background:var(--surface);color:var(--ink);border-radius:4px}
+form .btn{justify-self:start}
+#ok{grid-column:1/-1;margin:0;font-weight:600;color:var(--teal)}
+.contact{margin-top:32px;color:var(--slate);font-size:15px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--slate);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:720px){.links{grid-template-columns:1fr}.links a{border-right:0;border-bottom:1px solid var(--line);margin:0}.rows>div,form{grid-template-columns:1fr}.hero{padding:56px 0 40px}nav a{margin-left:14px;font-size:14px}.btn.alt{margin:10px 0 0}}
